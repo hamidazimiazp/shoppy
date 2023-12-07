@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+  overflow-y: scroll;
+  max-height: 100vh;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    max-height: unset;
+    overflow: auto;
+  }
+}

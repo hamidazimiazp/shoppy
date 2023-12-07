@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+.left {
+  min-width: 250px;
+  height: fit-content;
+
+  padding: 20px;
+  margin-left: 30px;
+  background-color: #fff;
+  border: 2px dashed #fe5d42;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
+}
+.top p,
+.topp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.title {
+  color: #fe5d42;
+}
+.data {
+  font-size: 14px;
+}
+.bottom {
+  width: 100%;
+  margin-top: 20px;
+}
+.bottom button {
+  all: unset;
+  background-color: #fe5d42;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}

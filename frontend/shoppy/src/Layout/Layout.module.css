@@ -1,0 +1,65 @@
+.header,
+.footer {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 2px dashed #e2e2e2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 0 10px;
+}
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header h1 a {
+  color: #fe5d42;
+  text-decoration: none;
+}
+.header > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.badge {
+  position: absolute;
+  background-color: #fe5d42;
+  min-width: 15px;
+  height: 15px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  top: 0;
+  right: -3px;
+  text-align: center;
+  font-weight: bold;
+}
+.main {
+  min-height: 85vh;
+}
+.footer {
+  justify-content: center;
+  margin-top: 20px;
+}
+.footer p {
+  color: #fe5d42;
+}
+.footer a {
+  color: #fe5d42;
+  text-decoration: none;
+  opacity: 0.8;
+  font-weight: bold;
+}
