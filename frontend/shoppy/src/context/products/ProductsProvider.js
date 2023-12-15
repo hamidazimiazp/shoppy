@@ -9,7 +9,7 @@ const ProductsProvider = ({ children }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        setProducts(await api.get("/products"));
+        setProducts(await api.get("/shop/products/"));
       } catch (error) {
         console.log(error.message);
       }

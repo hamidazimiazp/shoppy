@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "https://fakestoreapi.com" });
+export const baseURL = "http://127.0.0.1:8000";
+
+const api = axios.create({ baseURL: baseURL });
 
 api.interceptors.response.use(
   (response) => response.data,

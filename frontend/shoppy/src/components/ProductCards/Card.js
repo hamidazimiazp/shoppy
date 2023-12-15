@@ -14,6 +14,7 @@ import {
 } from "../../utils/tools/tools";
 import styles from "./cards.module.css";
 import { useCart } from "../../context/cart/CartProvider";
+import { baseURL } from "../../services/config";
 
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
@@ -22,7 +23,7 @@ const Card = ({ data }) => {
 
   return (
     <div className={styles.card}>
-      <img src={image} alt="title" />
+      <img src={baseURL + image} alt="title" />
       <h3>{textShortener(title, 3)}</h3>
       <p>${price}</p>
       <div className={styles.actions}>
