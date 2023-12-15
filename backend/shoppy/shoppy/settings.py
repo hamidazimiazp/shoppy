@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,6 +135,7 @@ MEDIA_URL = '/media/'
 INTERNAL_IPS = [
     # ...
     "127.0.0.1",
+    "192.168.1.8"
     # ...
 ]
 CORS_ORIGIN_WHITELIST = [
