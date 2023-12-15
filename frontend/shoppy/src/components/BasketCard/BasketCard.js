@@ -13,6 +13,7 @@ import {
   TbTrash,
 } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { baseURL } from "../../services/config";
 
 const BasketCard = ({ data }) => {
   const [state, dispatch] = useCart();
@@ -22,7 +23,7 @@ const BasketCard = ({ data }) => {
   return (
     <div className={styles.container}>
       <Link to={`/product/${id}`}>
-        <img src={data.image} alt={data.title} />
+        <img src={baseURL + data.image} alt={data.title} />
       </Link>
       <p>{textShortener(data.title, 3)}</p>
       <div className={styles.actions}>

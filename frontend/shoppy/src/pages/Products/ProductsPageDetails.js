@@ -7,6 +7,7 @@ import { IoMdPricetag } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa";
 import styles from "./ProductsPageDetails.module.css";
 import BackArrow from "../../components/BackArrow/BackArrow";
+import { baseURL } from "../../services/config";
 
 const ProductsPageDetails = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const ProductsPageDetails = () => {
     <>
       <BackArrow />
       <div className={styles.container}>
-        <img src={product.image} alt={product.title} />
+        <img src={baseURL + product.image} alt={product.title} />
         <div className={styles.information}>
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.description}>{product.description}</p>
