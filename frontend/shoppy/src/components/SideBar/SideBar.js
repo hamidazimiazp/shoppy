@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaListUl } from "react-icons/fa";
 import { createQueryObject } from "../../utils/tools/tools";
 import styles from "./SideBar.module.css";
-import { categories } from "../../constant/list";
+import { getCategories } from "../../services/service";
+// import { categories } from "../../constant/list";
 
 const SideBar = ({ query, setQuery }) => {
+  const [categories, setCategories] = useState([]);
+
   const categorieHandler = (e) => {
     const { tagName } = e.target;
     if (tagName !== "LI") return;
@@ -13,7 +16,12 @@ const SideBar = ({ query, setQuery }) => {
     e.target.classList.add("selected");
   };
 
-  useEffect(() => {});
+  useEffect(() => {
+    const gett = async () => {
+      setCategories([{ id: 0, title: "All" }, ...(await getCategories())]);
+    };
+    gett();
+  }, []);
 
   return (
     <div className={styles.sidebar}>
@@ -22,18 +30,19 @@ const SideBar = ({ query, setQuery }) => {
         <p>Ctegories</p>
       </div>
       <ul onClick={categorieHandler}>
-        {categories.map((category) => (
-          <li
-            key={category.id}
-            className={
-              category.type.toLowerCase() === query.category
-                ? styles.selected
-                : null
-            }
-          >
-            {category.type}
-          </li>
-        ))}
+        {categories &&
+          categories.map((category) => (
+            <li
+              key={category.id}
+              className={
+                category.title.toLowerCase() === query.category
+                  ? styles.selected
+                  : null
+              }
+            >
+              {category.title}
+            </li>
+          ))}
       </ul>
     </div>
   );
