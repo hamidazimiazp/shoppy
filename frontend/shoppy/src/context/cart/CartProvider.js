@@ -27,7 +27,11 @@ export const cartReducer = (state = initialState, action) => {
           (item) => item.id === action.payload.id
         );
 
-        state.selectedItems[itemIndex].quantity++;
+        let item = state.selectedItems[itemIndex];
+
+        if (item.count > item.quantity) {
+          item.quantity++;
+        }
 
         return {
           ...state,
@@ -42,7 +46,8 @@ export const cartReducer = (state = initialState, action) => {
           (item) => item.id === action.payload.id
         );
 
-        state.selectedItems[itemIndex].quantity--;
+        let item = state.selectedItems[itemIndex];
+        item.quantity--;
 
         return {
           ...state,
